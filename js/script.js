@@ -1,6 +1,6 @@
 const L={
  dep:["Comercial","Callcenter","Marketing","Financeiro","Logística","Compras","Cadastro","Recursos Humanos","TI"],
- canal:["Grupo de WhatsApp","WhatsApp direto","Chamado no sistema","Ligação","E-mail","Pessoalmente"],
+ canal:["Grupo de WhatsApp","WhatsApp direto","Intra (Requisição ou Chamados)","SAC","Ligação","E-mail","Pessoalmente"],
  trava:["Não sei quem é o responsável pela informação","A resposta demora","A resposta vem incompleta","As regras mudam sem aviso","Cada setor me diz uma coisa","Outro motivo"],
  ajuda:["Um canal único para pedir informação","Prazo de resposta combinado entre os setores","Um responsável definido por etapa","Aviso quando cliente, preço ou regra mudar","Reuniões de alinhamento entre setores","Treinamento sobre o processo do outro setor"]
 };
