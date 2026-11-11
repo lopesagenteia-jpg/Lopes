@@ -36,3 +36,8 @@ button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
 .done p{color:var(--muted);margin:0}
 .foot{color:var(--muted);font-size:13px;text-align:center;margin:0}
 .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+.brand{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;display:flex;justify-content:center}
+.brand img{height:56px;width:auto;max-width:100%}
+.lema{display:inline-block;margin-bottom:12px;padding:4px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em}
+.head{background:var(--navy)}
