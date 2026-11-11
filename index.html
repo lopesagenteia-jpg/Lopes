@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comunicação entre Setores</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="app">
+  <div class="head">
+    <small>Lopes PRO · Jornada de Liderança</small>
+    <h1>Como a informação circula entre os setores?</h1>
+    <p>Esta pesquisa faz parte de um trabalho da escola de líderes do Grupo Lopes. Leva cerca de 3 minutos. Não pedimos nome nem e-mail, e as respostas serão resumidas em conjunto, sem apontar pessoas.</p>
+  </div>
+  <form id="f" novalidate autocomplete="off">
+    <div class="stack">
+      <section class="q"><h2>1. Em qual setor você trabalha? <span class="req">*</span></h2>
+        <select id="setor" required><option value="">Selecione</option><option>Comercial</option><option>Callcenter</option><option>Marketing</option><option>Financeiro</option><option>Logística</option><option>Compras</option><option>Cadastro</option><option>Recursos Humanos</option><option>TI</option><option>Outro</option></select></section>
+      <section class="q"><h2>2. De quais setores você mais depende para fazer seu trabalho?</h2><p class="hint">Marque quantos quiser.</p><div class="opts" id="dep"></div></section>
+      <section class="q"><h2>3. Com que frequência a informação que você precisa chega atrasada ou incompleta? <span class="req">*</span></h2><div class="scale" id="s3"></div><div class="ends"><span>Nunca</span><span>Sempre</span></div></section>
+      <section class="q"><h2>4. Com que frequência você precisa refazer algo por falta de informação? <span class="req">*</span></h2><div class="scale" id="s4"></div><div class="ends"><span>Nunca</span><span>Sempre</span></div></section>
+      <section class="q"><h2>5. Quando precisa de resposta de outro setor, que canal você usa?</h2><p class="hint">Marque quantos quiser.</p><div class="opts" id="canal"></div></section>
+      <section class="q"><h2>6. Onde o processo mais trava? <span class="req">*</span></h2><div class="opts" id="trava"></div></section>
+      <section class="q"><h2>7. Conte uma situação recente em que algo travou ou foi refeito por falta de comunicação.</h2><p class="hint">Opcional. Descreva o que aconteceu, sem citar nomes de pessoas ou de clientes.</p><textarea id="exemplo" maxlength="1200"></textarea></section>
+      <section class="q"><h2>8. O que ajudaria mais a melhorar isso?</h2><p class="hint">Marque até 3.</p><div class="opts" id="ajuda"></div></section>
+      <div class="hp" aria-hidden="true"><label>Não preencha <input type="text" id="site" tabindex="-1" autocomplete="off"></label></div>
+      <div id="erro" class="msg err" hidden></div>
+      <button type="submit" id="enviar">Enviar resposta</button>
+      <p class="foot">Não coletamos nome, e-mail nem outro dado de identificação nas perguntas.</p>
+    </div>
+  </form>
+</main>
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
