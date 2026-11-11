@@ -10,8 +10,7 @@ opts('dep',L.dep,'checkbox','dep');opts('canal',L.canal,'checkbox','canal');opts
 ['s3','s4'].forEach(id=>{$(id).innerHTML=[1,2,3,4,5].map(n=>`<label><input type="radio" name="${id}" value="${n}"><b>${n}</b></label>`).join('');});
 const vals=n=>[...document.querySelectorAll(`input[name="${n}"]:checked`)].map(e=>e.value);
 document.addEventListener('change',e=>{if(e.target.name==='ajuda'&&vals('ajuda').length>3)e.target.checked=false;});
-function done(){$('app').innerHTML='<div class="q done"><h2>Resposta enviada</h2><p>Obrigado por contribuir. Suas respostas vão ajudar a melhorar a comunicação entre os setores.</p></div>';}
-try{if(localStorage.getItem('pesq-comunicacao')==='1')done();}catch(e){}
+function done(){$('app').innerHTML='<div class="q done"><h2>Resposta enviada</h2><p>Obrigado por contribuir. Suas respostas vão ajudar a melhorar a comunicação entre os setores.</p><button type="button" id="outra" style="margin-top:20px">Enviar outra resposta</button></div>';$('outra').addEventListener('click',()=>location.reload());}
 const form=$('f');
 if(form)form.addEventListener('submit',async ev=>{
   ev.preventDefault();const er=$('erro');er.hidden=true;
@@ -23,7 +22,6 @@ if(form)form.addEventListener('submit',async ev=>{
     const r=await fetch(APPS_SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
     const j=await r.json();
     if(!j.ok)throw new Error(j.erro||'falha');
-    try{localStorage.setItem('pesq-comunicacao','1');}catch(e){}
     done();
   }catch(e){
     btn.disabled=false;btn.textContent='Enviar resposta';
